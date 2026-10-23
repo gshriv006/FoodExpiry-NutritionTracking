@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Food Expiry and Nutrition Tracking System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login" class="card">
+  <h2>Food Expiry and Nutrition Tracking System</h2>
+  <h3>Login / Register</h3>
+  <div style="display: table; margin: 0 auto; text-align: right;">
+    <div style="display: table-row;">
+      <label style="display: table-cell; padding-right: 10px; vertical-align: middle;">Name:</label>
+      <input id="n" style="display: table-cell;">
+    </div>
+    <div style="display: table-row;">
+      <label style="display: table-cell; padding-right: 10px; vertical-align: middle;">Username:</label>
+      <input id="u" style="display: table-cell;">
+    </div>
+    <div style="display: table-row;">
+      <label style="display: table-cell; padding-right: 10px; vertical-align: middle;">Password:</label>
+      <input id="p" type="password" style="display: table-cell;">
+    </div>
+  </div>
+  <br>
+  <button onclick="login()">Login</button>
+  <button onclick="register()">Register</button>
+  <p id="err"></p>
+</div>
+
+<div id="app" style="display:none">
+  <h2>Food Expiry and Nutrition Tracking System</h2>
+  <p>Logged in as: <span id="who"></span> <button onclick="logout()">Logout</button></p>
+  <button onclick="show('inventory')">Inventory</button>
+  <button onclick="show('nutrition')">Nutrition</button>
+  <button onclick="show('recipes')">Recipes</button>
+  <button onclick="show('orders')">Orders</button>
+  <hr>
+  <div id="page"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
